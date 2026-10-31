@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "SOMtoday Case Opener",
+  "version": "1.1",
+  "description": "Open een CS2-case voor elk cijfer op de cijferpagina van SOMtoday.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.somtoday.nl/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sounds/*"
+      ],
+      "matches": [
+        "https://*.somtoday.nl/*"
+      ]
+    }
+  ]
+}
